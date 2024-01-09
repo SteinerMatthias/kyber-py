@@ -1,6 +1,6 @@
 import unittest
 import os
-from kyber import Kyber512, Kyber768, Kyber1024
+from kyber_py.kyber import Kyber512, Kyber768, Kyber1024
 from aes256_ctr_drbg import AES256_CTR_DRBG
 
 def parse_kat_data(data):

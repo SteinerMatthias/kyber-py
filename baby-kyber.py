@@ -7,8 +7,8 @@ all calculations are done by calling `polynomials` and
 `modules` rather than `Kyber` itself.
 """
 
-from polynomials import *
-from modules import *
+from kyber_py.polynomials import *
+from kyber_py.modules import *
 
 def keygen():
     # Randomness fixed for example

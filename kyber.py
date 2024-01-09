@@ -1,8 +1,8 @@
 import os
 from hashlib import sha3_256, sha3_512, shake_128, shake_256
-from polynomials import *
-from modules import *
-from ntt_helper import NTTHelperKyber
+from kyber_py.polynomials import *
+from kyber_py.modules import *
+from kyber_py.ntt_helper import NTTHelperKyber
 try:
     from aes256_ctr_drbg import AES256_CTR_DRBG
 except ImportError as e:
