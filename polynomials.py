@@ -218,6 +218,11 @@ class PolynomialRing:
                 raise ValueError("Can only perform Mont. reduction when parent element has an NTT Helper")
             return self.parent.ntt_helper.to_montgomery(self)
         
+        def from_montgomery(self):
+            if self.parent.ntt_helper is None:
+                raise ValueError("Can only perform Mont. reduction when parent element has an NTT Helper")
+            return self.parent.ntt_helper.from_montgomery(self)
+        
         def ntt_multiplication(self, other):
             """
             Number Theoretic Transform multiplication.

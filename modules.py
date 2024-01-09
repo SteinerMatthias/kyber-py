@@ -80,6 +80,12 @@ class Module:
                 for ele in row:
                     ele.to_montgomery()
             return self
+        
+        def from_montgomery(self):
+            for row in self.rows:
+                for ele in row:
+                    ele.from_montgomery()
+            return self
 
         def encode(self, l=None):
             output = b""

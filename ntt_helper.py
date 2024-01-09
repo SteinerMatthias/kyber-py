@@ -185,6 +185,10 @@ class NTTHelper():
         poly.is_ntt = False
         return poly
     
+    def from_montgomery(self, poly):
+        poly.coeffs = [self.mont_r_inv * c % self.q for c in poly.coeffs]
+        return poly
+    
 NTTHelperKyber = NTTHelper(NTT_PARAMETERS["kyber"])
 
 
